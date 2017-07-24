@@ -1,7 +1,7 @@
 CC := g++
 DEBUG := -g
 CFLAGS := -std=c++14
-LFLAGS := -Wall
+LFLAGS := -Wall -lncurses
 SOURCEDIR := src
 SOURCES := $(shell find $(SOURCEDIR) -name '*.cpp')
 BINARY := Gravity.out
