@@ -3,5 +3,12 @@
 
 int setup();
 
+class Screen {
+  public:
+    Screen();
+    ~Screen();
+  private:
+
+};
 
 #endif

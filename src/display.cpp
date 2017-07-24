@@ -2,6 +2,16 @@
 
 #include "display.h"
 
+using namespace std;
+
+Screen::Screen() {
+
+}
+
+Screen::~Screen() {
+
+}
+
 int setup() {
   initscr();
   raw();
@@ -11,3 +21,5 @@ int setup() {
   start_color();
   return 0;
 }
+
+void print
