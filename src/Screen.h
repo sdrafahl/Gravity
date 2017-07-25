@@ -3,17 +3,19 @@
 
 #include <ncurses.h>
 
+#include "Item.h"
 #include "SmartPtr.h"
 
 int setup();
 
 class Screen {
-  public:
-    Screen();
-    ~Screen();
-    void render();
-  private:
-    void printBorder();
+    public:
+        Screen();
+        void render();
+        void attachItem(Item* item);
+    private:
+        void printBorder();
+        Item* item;
 };
 
 #endif

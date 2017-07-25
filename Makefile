@@ -1,15 +1,16 @@
 CC := g++
 DEBUG := -g
 CFLAGS := -std=c++14
-LFLAGS := -Wall -lncurses
+LFLAGS := -Wall
 SOURCEDIR := src
 SOURCES := $(shell find $(SOURCEDIR) -name '*.cpp')
 BINARY := Gravity.out
+LINKS := -lncurses
 
 .PHONY: clean
 
 p1:
-	$(CC) $(CFLAGS) $(SOURCES) -o $(BINARY)
+	$(CC) $(CFLAGS) $(SOURCES) -o $(BINARY) $(LINKS)
 
 p2:
 	$(CC) $(LFLAGS) $(CFLAGS) $(SOURCES) $(DEBUG) -o $(BINARY)

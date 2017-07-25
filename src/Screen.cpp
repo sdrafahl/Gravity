@@ -1,20 +1,14 @@
 #include <ncurses.h>
+#include <curses.h>
 #include <string>
 #include <stdlib.h>
 
 #include "Screen.h"
+#include "SmartPtr.h"
 
 using namespace std;
 
-Screen::Screen() {
-
-}
-
-Screen::~Screen() {
-
-}
-
-void Screen::printBorder(){
+void Screen::printBorder() {
     int x=0;
     int y=0;
     string d = "#";
@@ -32,18 +26,27 @@ void Screen::printBorder(){
     }
 }
 
+Screen::Screen() {}
+
+void Screen::attachItem(Item* item) {
+    this->item = item;
+}
+
 void Screen::render() {
-  Screen::printBorder();
-  clear();
-  refresh();
+    clear();
+    Screen::printBorder();
+    mvaddstr(24 - this->item->y, this->item->x + 1, "I");
+    printf("\n");
+    refresh();
 }
 
 int setup() {
-  initscr();
-  raw();
-  noecho();
-  curs_set(0);
-  keypad(stdscr, TRUE);
-  start_color();
-  return 0;
+    initscr();
+    raw();
+    noecho();
+    curs_set(0);
+    wresize(stdscr, 100, 100);
+    keypad(stdscr, TRUE);
+    start_color();
+    return 0;
 }
