@@ -6,11 +6,11 @@ class Item {
         Item(unsigned int x, unsigned int y);
         ~Item() {}
         void handle();
+        void jump(float height);
         unsigned int x;
         unsigned int y;
-    private:
-        float gravity;
         float velocity;
+        float gravity;
 };
 
 #endif

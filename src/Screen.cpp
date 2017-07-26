@@ -12,6 +12,7 @@ void Screen::printBorder() {
     int x=0;
     int y=0;
     string d = "#";
+    string space = " ";
     for(y=0;y<80;y++){/*Top*/
         mvaddstr(0,y,d.c_str());
     }
@@ -23,6 +24,9 @@ void Screen::printBorder() {
     }
     for(x=0;x<26;x++){/*Right Side*/
         mvaddstr(x,80,d.c_str());
+    }
+    for(y=0;y<80;y++){/*Bottom*/
+        mvaddstr(26,y,space.c_str());
     }
 }
 
@@ -36,7 +40,10 @@ void Screen::render() {
     clear();
     Screen::printBorder();
     mvaddstr(24 - this->item->y, this->item->x + 1, "I");
-    printf("\n");
+    string yPos = "y: " + std::to_string(this->item->y);
+    mvaddstr(26,0,yPos.c_str());
+    string vel = "Velocity: " + std::to_string(this->item->velocity);
+    mvaddstr(27,0,vel.c_str());
     refresh();
 }
 
@@ -45,7 +52,6 @@ int setup() {
     raw();
     noecho();
     curs_set(0);
-    wresize(stdscr, 100, 100);
     keypad(stdscr, TRUE);
     start_color();
     return 0;
