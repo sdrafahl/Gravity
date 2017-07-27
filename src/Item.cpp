@@ -6,9 +6,9 @@
 
 using namespace std;
 
-Item::Item(unsigned int x, unsigned int y) {
-    this->gravity=3.0;
-    this->velocity=0.0;
+Item::Item(float x, float y) {
+    this->gravity=.099;
+    this->velocity=.1;
     this->x = x;
     this->y = y;
 }
@@ -20,7 +20,7 @@ void Item::jump(float velocity) {
 void Item::handle() {
     this->y += this->velocity;
     this->velocity -= this->gravity;
-    if(this->y < this->velocity) {
+    if(this->y + this->velocity <= 0) {
         this->velocity = 0.0;
         this->y = 0;
     }

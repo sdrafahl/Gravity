@@ -48,11 +48,13 @@ void Screen::render() {
 }
 
 int setup() {
+    cbreak();
     initscr();
     raw();
     noecho();
     curs_set(0);
     keypad(stdscr, TRUE);
+    nodelay(stdscr,TRUE);
     start_color();
     return 0;
 }

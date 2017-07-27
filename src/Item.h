@@ -3,12 +3,12 @@
 
 class Item {
     public:
-        Item(unsigned int x, unsigned int y);
+        Item(float x, float y);
         ~Item() {}
         void handle();
         void jump(float height);
-        unsigned int x;
-        unsigned int y;
+        float x;
+        float y;
         float velocity;
         float gravity;
 };

@@ -5,7 +5,7 @@ LFLAGS := -Wall
 SOURCEDIR := src
 SOURCES := $(shell find $(SOURCEDIR) -name '*.cpp')
 BINARY := Gravity.out
-LINKS := -lncurses
+LINKS := -lncurses -lpthread
 
 .PHONY: clean
 
