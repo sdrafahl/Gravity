@@ -7,8 +7,8 @@
 using namespace std;
 
 Item::Item(float x, float y) {
-    this->gravity=.099;
-    this->velocity=.1;
+    this->gravity=.09;
+    this->velocity=.01;
     this->x = x;
     this->y = y;
 }

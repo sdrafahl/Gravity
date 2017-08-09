@@ -25,11 +25,11 @@ int main() {
           system("reset");
       }else{
           if(inp == 'j') {
-              item->jump(5);
+              item->jump(1);
           }
       }
       item->handle();
-      usleep(50000);
+      usleep(5000);
   }
   return 0;
 }
