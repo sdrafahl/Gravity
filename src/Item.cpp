@@ -17,6 +17,14 @@ void Item::jump(float velocity) {
     this->velocity += velocity;
 }
 
+void Item::moveRight() {
+    this->x++;
+}
+
+void Item::moveLeft() {
+    this->x--;
+}
+
 void Item::handle() {
     this->y += this->velocity;
     this->velocity -= this->gravity;

@@ -26,6 +26,12 @@ int main() {
           if(inp == 'j') {
               item->jump(1);
           }
+          if(inp == 'm') {
+              item->moveRight();
+          }
+          if(inp == 'n') {
+              item->moveLeft();
+          }
       }
       item->handle();
       usleep(5000);

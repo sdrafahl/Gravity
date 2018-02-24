@@ -7,6 +7,8 @@ class Item {
         ~Item() {}
         void handle();
         void jump(float height);
+        void moveLeft();
+        void moveRight();
         float x;
         float y;
         float velocity;
