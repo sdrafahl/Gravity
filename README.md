@@ -30,6 +30,15 @@ jump
 ```
 j
 ```
+Move Right
+```
+m
+```
+Move Left
+```
+n
+```
+
 
 ### Technology
 
