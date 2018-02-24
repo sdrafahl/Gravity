@@ -4,7 +4,6 @@
 #include <ncurses.h>
 
 #include "Item.h"
-#include "SmartPtr.h"
 
 int setup();
 

@@ -4,7 +4,6 @@
 #include <stdlib.h>
 
 #include "Screen.h"
-#include "SmartPtr.h"
 
 using namespace std;
 

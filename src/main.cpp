@@ -6,7 +6,6 @@
 #include <string>
 #include <thread>
 
-#include "SmartPtr.h"
 #include "Screen.h"
 #include "Item.h"
 
